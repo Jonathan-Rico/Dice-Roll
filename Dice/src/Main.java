@@ -6,12 +6,13 @@ public class Main {
 		int bounces = input.nextInt();		
 		Dice dice = new Dice();
 		System.out.printf("The die has been rolled %d times\nThe dice rolls are\n", bounces);
-		
+		int avg = 0;
 		for (int i = bounces; i>0; i--) {
 			int y = dice.Throw(bounces);
 			System.out.printf("%d\n", y);
+			avg = y + avg;
 			if (i == 1) {
-				int value = dice.value(y , bounces);
+				int value = dice.value(avg , bounces);
 				System.out.printf("The die has rolled an average value of %d", value);	
 			}
 		}
