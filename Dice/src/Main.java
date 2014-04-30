@@ -7,12 +7,13 @@ public class Main {
 		Dice dice = new Dice();
 		System.out.printf("The die has been rolled %d times\nThe dice rolls are\n", bounces);
 		
-		for (int i = bounces; i >0; i--) {
+		for (int i = bounces; i>0; i--) {
 			int y = dice.Throw(bounces);
 			System.out.printf("%d\n", y);
+			if (i == 1) {
+				int value = dice.value(y , bounces);
+				System.out.printf("The die has rolled an average value of %d", value);	
+			}
 		}
-		
-		int value = dice.value(bounces);
-		System.out.printf("The die has rolled an average value of %d", value);	
 	}
 }
