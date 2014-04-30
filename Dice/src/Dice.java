@@ -1,9 +1,10 @@
 public class Dice {
-	public int Throw() {
+	public int Throw(int bounces) {
 	int x =	(int) (1 + Math.random() * 6);
-	return x;
+	int average = (x * bounces)/(bounces);
+	return average;
 	}
 	public int value () {
-	return x;	
+	return average;	
 	}
 }
