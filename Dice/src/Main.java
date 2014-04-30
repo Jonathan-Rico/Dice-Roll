@@ -1,12 +1,18 @@
 import java.util.Scanner;
-public class Main {
-	public static void main(String args []) {
+public class Main {	
+	public static void main(String args []) {		
 		System.out.printf("Please type in the number of times you want the die to be rolled\n");
-		int bounces = input.nextint();
-		System.out.printf("The die has been rolled %d times", bounces);
+		Scanner input = new Scanner(System.in);
+		int bounces = input.nextInt();		
 		Dice dice = new Dice();
-		int x = dice.Throw();
-		int value = dice.value();
-		System.out.printf("The die has rolled an average value of %d", value);
+		System.out.printf("The die has been rolled %d times\nThe dice rolls are\n", bounces);
+		
+		for (int i = bounces; i >0; i--) {
+			int y = dice.Throw(bounces);
+			System.out.printf("%d\n", y);
+		}
+		
+		int value = dice.value(bounces);
+		System.out.printf("The die has rolled an average value of %d", value);	
 	}
 }
