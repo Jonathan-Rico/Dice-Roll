@@ -4,6 +4,6 @@ public class Dice {
 	return x;
 	}
 	public int value () {
-	return x	
+	return x;	
 	}
 }
